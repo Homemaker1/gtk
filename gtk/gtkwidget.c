@@ -15200,14 +15200,14 @@ gtk_widget_maybe_add_debug_render_nodes (GtkWidget             *widget,
 
       if (baseline != -1)
         {
-          GdkRGBA black = {1, 0, 0, 1};
+          GdkRGBA red = {1, 0, 0, 1};
           graphene_rect_t bounds;
 
           graphene_rect_init (&bounds,
                               0, baseline,
                               priv->allocation.width, 1);
           gtk_snapshot_append_color (snapshot,
-                                     &black,
+                                     &red,
                                      &bounds,
                                      "Baseline Debug");
         }
